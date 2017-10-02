@@ -4,11 +4,17 @@ package com.jacksbadideas.monstergridgame;
  * Created by Matthew on 10/2/2017.
  */
 
-public class Equipment {
+public class Equipment extends Item{
     private String name;
     private int defence;
     private int magicDefence;
     private Apparel type;
+    public Equipment(){
+        name = null;
+        defence = 0;
+        magicDefence = 0;
+        type = null;
+    }
     public Equipment(String initName, int initDefence,
               int initMagicDefence, Apparel initType){
         name = initName;
