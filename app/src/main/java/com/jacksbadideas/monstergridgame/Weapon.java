@@ -10,14 +10,16 @@ public class Weapon extends Item{
     private int criticalDamage;
     private int statusChance;
     private int statusDamage;
+    private Status status;
     public Weapon(int initAttack, int initCriticalChance,
                   int initCriticalDamage, int initStatusChance,
-                  int initStatusDamage){
+                  int initStatusDamage, Status initStatus){
         attack = initAttack;
         criticalChance = initCriticalChance;
         criticalDamage = initCriticalDamage;
         statusChance = initStatusChance;
         statusDamage = initStatusDamage;
+        status = initStatus;
     }
     //region Mutator and accessor methods
     public int getAttack(){
@@ -49,6 +51,12 @@ public class Weapon extends Item{
     }
     public void setStatusDamage(int newStatusDamage){
         statusDamage = newStatusDamage;
+    }
+    public Status getStatus(){
+        return status;
+    }
+    public void setStatus(Status newStatus){
+        status = newStatus;
     }
     //endregion
 }
