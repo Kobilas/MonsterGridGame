@@ -4,13 +4,13 @@ package com.jacksbadideas.monstergridgame;
  * Created by Matthew on 10/2/2017.
  */
 
-public class unit {
+public class Unit {
     private int health;
     private int attack;
     private int defence;
     private int magicDefence;
-    private bool alive;
-    public unit(int initHealth, int initAttack, int initDefence, int initMagicDefence, bool initAlive){
+    private boolean alive;
+    public Unit(int initHealth, int initAttack, int initDefence, int initMagicDefence, boolean initAlive){
         health = initHealth;
         attack = initAttack;
         defence = initDefence;
@@ -41,10 +41,10 @@ public class unit {
     public void setMagicDefence(int newMagicDefence){
         magicDefence = newMagicDefence;
     }
-    public bool isAlive(){
+    public boolean isAlive(){
         return alive;
     }
-    public void setAlive(bool newAlive){
+    public void setAlive(boolean newAlive){
         alive = newAlive;
     }
 }
