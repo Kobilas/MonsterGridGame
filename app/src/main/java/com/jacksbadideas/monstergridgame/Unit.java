@@ -6,17 +6,22 @@ package com.jacksbadideas.monstergridgame;
 
 public class Unit {
     private int health;
+    private int hp;
     private int attack;
     private int defence;
+    private int facing; // 0 is east, 3 is south
     private int magicDefence;
-    private boolean alive;
-    public Unit(int initHealth, int initAttack, int initDefence, int initMagicDefence, boolean initAlive){
+    public Unit(int initHealth, int initHp, int initAttack,
+                int initDefence, int initMagicDefence,
+                int initFacing){
         health = initHealth;
         attack = initAttack;
         defence = initDefence;
         magicDefence = initMagicDefence;
-        alive = initAlive;
+        hp = initHp;
+        facing = initFacing;
     }
+    //region Mutator and accessor methods
     public int getHealth(){
         return health;
     }
@@ -41,10 +46,20 @@ public class Unit {
     public void setMagicDefence(int newMagicDefence){
         magicDefence = newMagicDefence;
     }
-    public boolean isAlive(){
-        return alive;
+    public int getHp(){
+        return hp;
     }
-    public void setAlive(boolean newAlive){
-        alive = newAlive;
+    public void setHp(int newHp){
+        hp = newHp;
+    }
+    public int getFacing(){
+        return facing;
+    }
+    public void setFacing(int newFacing){
+        facing = newFacing;
+    }
+    //endregion
+    public int attack(int direction){
+        return direction;
     }
 }
